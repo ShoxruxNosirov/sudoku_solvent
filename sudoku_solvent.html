@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sudoku solver</title>
+    <style>
+        input {
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            font-size: 28px;
+        }
+        table, tr, td {
+            padding: 0px;
+            border: 0px solid;
+            background-color: rgb(200, 200, 200);
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+            <td>
+                <input value="" maxlength="1">
+            </td>
+        </tr>
+    </table>
+    <button onclick="solveee()"> hisoblansin </button>
+    <div id = 'div'>hisoblanmoqda...</div>
+
+    <script>
+        let color = ['green', 'yellow', 'red'];
+        let k = 0;
+        
+        let tdAll = document.querySelectorAll('td');
+            for (let i = 0; i < 9; i++) {
+                for (let j = 0; j < 9; j++) {
+                    let k = i * 9 + j;
+                    if( j % 3 === 0){
+                        tdAll[k].style.borderLeft = '1px solid rgb(60, 60, 60)'; 
+                    }
+                    if(j % 3 === 2){
+                        tdAll[k].style.borderRight = '1px solid rgb(60, 60, 60)'; 
+                    }
+                    if( i % 3 === 0){
+                        tdAll[k].style.borderTop = '1px solid rgb(60, 60, 60)';
+                    }
+                    if(i % 3 === 2){
+                        tdAll[k].style.borderBottom = '1px solid rgb(60, 60, 60) ';
+                    }
+                }
+            }
+
+        let button = document.querySelector('button');
+        let div = document.getElementById('div');
+        div.hidden = true;
+        
+        function solveee(){
+            button.style.background = color[(k++) % 3];
+            button.hidden = true; 
+            div.hidden = false;
+            setTimeout(solvee, 0);
+        }
+
+        function solvee() {
+
+            let inputAll = document.querySelectorAll('input');
+            let arr = [];
+            for (let i = 0; i < 9; i++) {
+                arr[i] = [];
+            }
+
+            for (let i = 0; i < 9; i++) {
+                for (let j = 0; j < 9; j++) {
+                    let k = i * 9 + j;
+                    arr[i][j] = inputAll[k].value;
+                    if (arr[i][j] === '') {
+                        inputAll[k].style.color = 'blue';
+                        arr[i][j] = '.';
+                    } else {
+                        inputAll[k].style.color = '';
+                    }
+                }
+            }
+
+            arr = solveSudoku(arr, '.');
+
+            if (!arr) {
+                alert(`bu sudokuni yechimi yo'q`);
+            } else 
+            for (let i = 0; i < 9; i++) {
+                for (let j = 0; j < 9; j++) {
+                    let k = i * 9 + j;
+                    inputAll[k].value = arr[i][j];
+                    //inputAll[k].setAttribute('value', arr[i][j]);
+                }
+            }
+            div.hidden = true;
+            button.hidden = false;
+        }
+
+        function solveSudoku(board, no) {
+
+            function clone(arr) {
+                let arr2 = [];
+                for (let i = 0; i < arr.length; i++) {
+                    arr2[i] = [...arr[i]];
+                }
+                return arr2;
+            }
+            // katakchaga qo'yilishi mumkin soonlarni massivini qaytarish funksiyasi
+            function func(n, m) {
+                let arr = [];
+                let n_i = n - n % 3;
+                let m_j = m - m % 3
+                for (let i = n_i; i < n_i + 3; i++) {
+                    for (let j = m_j; j < m_j + 3; j++) {
+                        if (board[i][j] !== no) {
+                            arr.push(board[i][j]);
+                        }
+                    }
+                }
+                for (let i = 0; i < 9; i++) {
+                    if (board[n][i] !== no) {
+                        arr.push(board[n][i]);
+                    }
+                    if (board[i][m] !== no) {
+                        arr.push(board[i][m]);
+                    }
+                }
+                arr.sort();
+                let arrReturn = [];
+                let k = 1;
+                for (let i = 0; i < arr.length; i++) {
+                    if (k < +arr[i]) {
+                        arrReturn.push(`${k}`);
+                        k++;
+                        i--;
+                    } else if (k === +arr[i]) {
+                        k++;
+                    }
+                }
+                while (k < 10) {
+                    arrReturn.push(`${k}`);
+                    k++;
+                }
+                return arrReturn;
+            }
+            // katakchaga biror son kiritilganda  qolgan katakchaga kiritish mumkin bo'lgan sonni olib tashlash funcsiyasi
+            function funk(n, m, k, arr) {
+                let n_i = n - n % 3;
+                let m_j = m - m % 3;
+                arr[n * 9 + m].length = 2;
+
+                for (let i = n_i; i < n_i + 3; i++) {
+                    for (let j = m_j; j < m_j + 3; j++) {
+                        let s = i * 9 + j;
+                        if (arr[s].length > 2) {
+                            let ss = arr[s].lastIndexOf(k);
+                            if (ss > 1) {
+                                arr[s].splice(ss, 1);
+                            }
+                        }
+                    }
+                }
+                for (let i = m; i < 81; i += 9) {
+                    if (arr[i].length > 2) {
+                        let ss = arr[i].lastIndexOf(k);
+                        if (ss > 1) {
+                            arr[i].splice(ss, 1);
+                        }
+                    }
+                }
+                m = (n + 1) * 9;
+                n *= 9;
+                for (let i = n; i < m; i++) {
+                    if (arr[i].length > 2) {
+                        let ss = arr[i].lastIndexOf(k);
+                        if (ss > 1) {
+                            arr[i].splice(ss, 1);
+                        }
+                    }
+                }
+            }
+            function solved(board) {
+                for (let a of board) {
+                    if (a.indexOf(no) > 0) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            function sodokuOk(arr, board) {
+                let s;
+                while (true) {
+                    s = 0;
+                    let i = 0;
+                    let k = true;
+                    while (i < 81) {
+                        if (arr[i].length === 3) {
+                            board[arr[i][0]][arr[i][1]] = arr[i][2];
+                            funk(...arr[i], arr);
+                            k = false;
+                        }
+                        if (arr[i].length == 2) {
+                            s++;
+                        }
+                        i++;
+                    }
+                    if (s === 81) {
+                        if (solved(board)) {
+                            s = 3;
+                        } else {
+                            s = 0;
+                        }
+                        break;
+                    }
+                    if (k) {
+                        s = 1;
+                        break;
+                    }
+                }
+                return s;
+            }
+
+            function rekSol(arr, board) {
+                let temp = arr.find(elem => elem.length > 2);
+                if(!temp){
+                    temp = sodokuOk(arr, board);
+                    if(temp === 3){
+                        return board;
+                    } else if(temp === 1) {
+                        return 0;
+                    }
+                }
+                for (let i = 0; i < arr.length; i++) {
+                    if (arr[i].length > 2 && temp.length > arr[i].length) {
+                        temp = arr[i];
+                    }
+                }
+
+                for (let i = 2; i < temp.length; i++) {
+                    //for(let i = temp.length - 1; i > 1; i--){
+                    let arr2 = clone(arr);
+                    let board2 = clone(board);
+                    board2[temp[0]][temp[1]] = temp[i];
+                    funk(temp[0], temp[1], temp[i], arr2);
+                    let k = sodokuOk(arr2, board2);
+                    if (k === 3) {
+                        return board2;
+                    } else if (k === 0) {
+                        continue;
+                    } else if (k === 1) {
+                        let rek = rekSol(arr2, board2);
+                        if (rek) {
+                            return rek;
+                        }
+                    }
+                }
+                return 0;
+            }
+
+            // main 
+
+            let arr = [];
+            for (let i = 0; i < 9; i++) {
+                for (let j = 0; j < 9; j++) {
+                    if (board[i][j] === no) {
+                        arr.push([i, j, ...func(i, j)]);
+                    } else {
+                        arr.push([i, j]);
+                    }
+                }
+            }
+
+            // if (sodokuOk(arr, board) === 3) {
+            //     return board;
+            // } 
+            let abs = rekSol(arr, board);
+
+            if(!abs){
+                return 0;
+            }
+            for (let i = 0; i < 9; i++) {
+                for (let j = 0; j < 9; j++) {
+                    board[i][j] = abs[i][j];
+                }
+            }
+            return board;
+        };
+    </script>
+
+</body>
+
+</html>
